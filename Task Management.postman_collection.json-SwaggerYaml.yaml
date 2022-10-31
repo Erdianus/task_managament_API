@@ -1,0 +1,245 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Task Management
+  description: Rest API Task Management
+  contact: {}
+host: localhost:8081
+basePath: /
+securityDefinitions: {}
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /task_management/task:
+    get:
+      summary: Get all Task
+      tags:
+      - Task
+      operationId: GetallTask
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    post:
+      summary: Create Task
+      tags:
+      - Task
+      operationId: CreateTask
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: category_id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: title
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: description
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: start_date
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: finish_date
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: status
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: doc_url
+        in: formData
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    put:
+      summary: Update Task
+      tags:
+      - Task
+      operationId: UpdateTask
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: category_id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: title
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: description
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: start_date
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: finish_date
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: status
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: doc_url
+        in: formData
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    delete:
+      summary: Delete Task
+      tags:
+      - Task
+      operationId: DeleteTask
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /task_management:
+    get:
+      summary: Get All Task Categories
+      tags:
+      - Task Categories
+      operationId: GetAllTaskCategories
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    post:
+      summary: Create Task Categories
+      tags:
+      - Task Categories
+      operationId: CreateTaskCategories
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: name
+        in: formData
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    put:
+      summary: Update Task Categories
+      tags:
+      - Task Categories
+      operationId: UpdateTaskCategories
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: name
+        in: formData
+        required: true
+        type: string
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    delete:
+      summary: Delete Task Categories
+      tags:
+      - Task Categories
+      operationId: DeleteTaskCategories
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+tags:
+- name: Task
+  description: Rest API Task
+- name: Task Categories
+  description: REST API Task Categories
